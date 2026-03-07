@@ -250,7 +250,7 @@ try {
 - Never use ternary expressions (`? :`). Always use `if`/`else` — they are easier to read.
 
 ### Formatting
-- All code must be formatted to IntelliJ defaults and imports optimised (unused imports removed, imports ordered per IntelliJ conventions) before saving.
+- All code must be formatted to IntelliJ defaults and imports optimised (unused imports removed, imports ordered per IntelliJ conventions) before saving. Claude cannot invoke IntelliJ's Reformat Code action directly — write code that matches IntelliJ defaults so that applying Reformat Code (`⌥⌘L`) produces no changes.
 - No blank lines between field declarations:
 
 ```java
