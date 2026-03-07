@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    alias(libs.plugins.spring.boot)
+}
+
+group = 'com.mattjoneslondon'
+version = '1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform(libs.spring.boot.bom)
+    implementation libs.spring.boot.starter
+    implementation libs.spring.boot.starter.webflux
+    implementation libs.spring.boot.starter.graphql
+    annotationProcessor libs.spring.boot.configuration.processor
+    testImplementation libs.spring.boot.starter.test
+}
+
+test {
+    useJUnitPlatform()
+}
